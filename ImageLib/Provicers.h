@@ -53,28 +53,4 @@ namespace image_lib
 	{
 		return detail::co_ownership_image_provider<ImageFormat>::create( w, h );
 	}
-
-	template<typename ImageType, typename CharType>
-	inline void import_raw_image(ImageType& image, const CharType& file_name)
-	{
-		read_raw_image( file_name, image.address(),
-				ImageType::image_format::size_policy::image_size_in_byte(image.width(),image.height()) );
-	}
-
-	template<typename ImageType, typename CharType>
-	inline void export_raw_image(ImageType& image, const CharType& file_name)
-	{
-		if(is_subimage(image.source()))
-		{
-			ImageType dst = create_co_ownership_image( image.width(), image.height(), ImageType::image_format() );
-			std::copy( image.begin(), image.end(), dst.begin() );
-			write_raw_image( file_name, dst.address(),
-				ImageType::image_format::size_policy::image_size_in_byte(dst.width(),dst.height()));
-		}
-		else
-		{
-			write_raw_image( file_name, image.address(),
-				ImageType::image_format::size_policy::image_size_in_byte(image.width(),image.height()) );
-		}
-	}
 }
