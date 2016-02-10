@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Bitmap">
+      <UniqueIdentifier>{9613e229-6b35-425c-a09a-daad82aa8ab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Incremeter">
+      <UniqueIdentifier>{c183f958-861c-43d3-b948-342b3971b24c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Locator">
+      <UniqueIdentifier>{1c8e1362-000b-470d-a53b-e030d246ad3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Reference">
+      <UniqueIdentifier>{5f2a49de-764d-4e70-b491-3901e7184cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Iterator">
+      <UniqueIdentifier>{918ecec3-a9c6-4a3b-bece-81ccab5bfd7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Format">
+      <UniqueIdentifier>{6ecdec24-03a7-49c2-813e-5941818023f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Source">
+      <UniqueIdentifier>{6e9948e0-f9bc-487a-9f23-dd1df7b36ff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Provider">
+      <UniqueIdentifier>{5f29f604-af7e-40fd-9b98-c7bd7cf374cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Typedefs">
+      <UniqueIdentifier>{3883f001-0f13-4d8d-8d38-c1c6468b9241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Utility">
+      <UniqueIdentifier>{6f6abddf-dd55-44ab-8d72-4a4661b0a78f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\RawImage">
+      <UniqueIdentifier>{c34584a9-f967-4966-b4a1-e6f35ca6ad34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Size">
+      <UniqueIdentifier>{cf61c83a-406a-4735-a78d-060698fc8d36}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GenericImage.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAll.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicPixelIterator.h">
+      <Filter>ヘッダー ファイル\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="BitFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="BitLocator.h">
+      <Filter>ヘッダー ファイル\Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="BitPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="GrayFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="GrayPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Incremeter2d.h">
+      <Filter>ヘッダー ファイル\Incremeter</Filter>
+    </ClInclude>
+    <ClInclude Include="PackedFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="PlanarFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="SourceHolderBase.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerHolder.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SubImageProvider.h">
+      <Filter>ヘッダー ファイル\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Provicers.h">
+      <Filter>ヘッダー ファイル\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Locator.h">
+      <Filter>ヘッダー ファイル\Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BitmapImage.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BitmapFileCommon.h">
+      <Filter>ヘッダー ファイル\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BitmapFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BmpImageProvider.h">
+      <Filter>ヘッダー ファイル\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BmpImageSource.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BmpLocator.h">
+      <Filter>ヘッダー ファイル\Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BmpPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTypes.h">
+      <Filter>ヘッダー ファイル\Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BitmapTypes.h">
+      <Filter>ヘッダー ファイル\Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticRecursion.h">
+      <Filter>ヘッダー ファイル\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="RawImageAdapter.h">
+      <Filter>ヘッダー ファイル\RawImage</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BitmapImageSize.h">
+      <Filter>ヘッダー ファイル\Size</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageSize.h">
+      <Filter>ヘッダー ファイル\Size</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageSizeCalculator.h">
+      <Filter>ヘッダー ファイル\Size</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BmpBitPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap\BmpBitLocator.h">
+      <Filter>ヘッダー ファイル\Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageSourceDispatcher.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageSourceTag.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
