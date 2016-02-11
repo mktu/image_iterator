@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="144" failures="0" disabled="0" errors="0" timestamp="2016-02-10T21:20:27" time="0.362" name="AllTests">
-  <testsuite name="T_BasicIter" tests="11" failures="0" disabled="0" errors="0" time="0.016">
+<testsuites tests="144" failures="0" disabled="0" errors="0" timestamp="2016-02-11T10:59:07" time="0.344" name="AllTests">
+  <testsuite name="T_BasicIter" tests="11" failures="0" disabled="0" errors="0" time="0">
     <testcase name="iter_step_inc_row_test" status="run" time="0" classname="T_BasicIter" />
     <testcase name="iter_step_inc_col_test" status="run" time="0" classname="T_BasicIter" />
     <testcase name="iter_dec_row_test" status="run" time="0" classname="T_BasicIter" />
@@ -19,9 +19,9 @@
     <testcase name="bit_size_test2" status="run" time="0" classname="T_BitIter" />
     <testcase name="fill_bit_img_byte" status="run" time="0" classname="T_BitIter" />
     <testcase name="fill_bit_img_short" status="run" time="0" classname="T_BitIter" />
-    <testcase name="it_speed_test_1" status="run" time="0.031" classname="T_BitIter" />
+    <testcase name="it_speed_test_1" status="run" time="0.016" classname="T_BitIter" />
   </testsuite>
-  <testsuite name="T_BmpIter" tests="16" failures="0" disabled="0" errors="0" time="0.078">
+  <testsuite name="T_BmpIter" tests="16" failures="0" disabled="0" errors="0" time="0.094">
     <testcase name="pixel_24bit_test" status="run" time="0" classname="T_BmpIter" />
     <testcase name="pixel_8bit_test" status="run" time="0" classname="T_BmpIter" />
     <testcase name="pixel_8bit_color_test" status="run" time="0" classname="T_BmpIter" />
@@ -35,11 +35,11 @@
     <testcase name="not_4byte_allign_8bit_color" status="run" time="0" classname="T_BmpIter" />
     <testcase name="not_4byte_allign_non_ownership_24bit" status="run" time="0" classname="T_BmpIter" />
     <testcase name="nested_sub_bmp_img" status="run" time="0" classname="T_BmpIter" />
-    <testcase name="bmp_it_speed_test_rgb" status="run" time="0.015" classname="T_BmpIter" />
-    <testcase name="bmp_it_access_like_array_speed_test_rgb" status="run" time="0.032" classname="T_BmpIter" />
-    <testcase name="bmp_simple_pointer_speed_test" status="run" time="0.015" classname="T_BmpIter" />
+    <testcase name="bmp_it_speed_test_rgb" status="run" time="0.031" classname="T_BmpIter" />
+    <testcase name="bmp_it_access_like_array_speed_test_rgb" status="run" time="0.016" classname="T_BmpIter" />
+    <testcase name="bmp_simple_pointer_speed_test" status="run" time="0.016" classname="T_BmpIter" />
   </testsuite>
-  <testsuite name="T_BmpMonoIter" tests="5" failures="0" disabled="0" errors="0" time="0.016">
+  <testsuite name="T_BmpMonoIter" tests="5" failures="0" disabled="0" errors="0" time="0">
     <testcase name="pixel_rgb2_test" status="run" time="0" classname="T_BmpMonoIter" />
     <testcase name="pixel_mono_test" status="run" time="0" classname="T_BmpMonoIter" />
     <testcase name="bmp_mono_size_test" status="run" time="0" classname="T_BmpMonoIter" />
@@ -49,7 +49,7 @@
   <testsuite name="T_avg_filter" tests="1" failures="0" disabled="0" errors="0" time="0">
     <testcase name="filter" status="run" time="0" classname="T_avg_filter" />
   </testsuite>
-  <testsuite name="ImageTTest" tests="6" failures="0" disabled="0" errors="0" time="0">
+  <testsuite name="ImageTTest" tests="6" failures="0" disabled="0" errors="0" time="0.015">
     <testcase name="const_image_test1" status="run" time="0" classname="ImageTTest" />
     <testcase name="const_image_test2" status="run" time="0" classname="ImageTTest" />
     <testcase name="const_image_test3" status="run" time="0" classname="ImageTTest" />
@@ -57,7 +57,7 @@
     <testcase name="sub_image_test1" status="run" time="0" classname="ImageTTest" />
     <testcase name="sub_image_test2" status="run" time="0" classname="ImageTTest" />
   </testsuite>
-  <testsuite name="T_Iter" tests="11" failures="0" disabled="0" errors="0" time="0.08">
+  <testsuite name="T_Iter" tests="11" failures="0" disabled="0" errors="0" time="0.063">
     <testcase name="pixel_test" status="run" time="0" classname="T_Iter" />
     <testcase name="packed_size_test" status="run" time="0" classname="T_Iter" />
     <testcase name="planar_size_test" status="run" time="0" classname="T_Iter" />
@@ -67,20 +67,20 @@
     <testcase name="fill_img_packed_reverse_iter" status="run" time="0" classname="T_Iter" />
     <testcase name="nested_sub_img" status="run" time="0" classname="T_Iter" />
     <testcase name="simple_pointer_speed_test" status="run" time="0.016" classname="T_Iter" />
-    <testcase name="img_t_speed_test_with_subimage" status="run" time="0.028" classname="T_Iter" />
-    <testcase name="img_t_speed_test_with_array_like_access" status="run" time="0.019" classname="T_Iter" />
+    <testcase name="img_t_speed_test_with_subimage" status="run" time="0.031" classname="T_Iter" />
+    <testcase name="img_t_speed_test_with_array_like_access" status="run" time="0.016" classname="T_Iter" />
   </testsuite>
-  <testsuite name="T_MonoIter" tests="3" failures="0" disabled="0" errors="0" time="0">
+  <testsuite name="T_MonoIter" tests="3" failures="0" disabled="0" errors="0" time="0.016">
     <testcase name="mono_pixel_test" status="run" time="0" classname="T_MonoIter" />
     <testcase name="mono_size_test" status="run" time="0" classname="T_MonoIter" />
     <testcase name="fill_mono_img" status="run" time="0" classname="T_MonoIter" />
   </testsuite>
-  <testsuite name="IteratorTest2" tests="3" failures="0" disabled="0" errors="0" time="0.032">
+  <testsuite name="IteratorTest2" tests="3" failures="0" disabled="0" errors="0" time="0.031">
     <testcase name="mono_simple_pointer_speed_test" status="run" time="0" classname="IteratorTest2" />
-    <testcase name="mono_image_t_speed_test" status="run" time="0" classname="IteratorTest2" />
-    <testcase name="mono_image_t_array_like_access_speed_test" status="run" time="0" classname="IteratorTest2" />
+    <testcase name="mono_image_t_speed_test" status="run" time="0.015" classname="IteratorTest2" />
+    <testcase name="mono_image_t_array_like_access_speed_test" status="run" time="0.016" classname="IteratorTest2" />
   </testsuite>
-  <testsuite name="BitIter_Category/PT_BitIter_Row" tests="4" failures="0" disabled="0" errors="0" time="0.015">
+  <testsuite name="BitIter_Category/PT_BitIter_Row" tests="4" failures="0" disabled="0" errors="0" time="0">
     <testcase name="fill_bit_row_byte/0" value_param="0" status="run" time="0" classname="BitIter_Category/PT_BitIter_Row" />
     <testcase name="fill_bit_row_byte/1" value_param="15" status="run" time="0" classname="BitIter_Category/PT_BitIter_Row" />
     <testcase name="fill_bit_row_short/0" value_param="0" status="run" time="0" classname="BitIter_Category/PT_BitIter_Row" />
@@ -142,7 +142,7 @@
     <testcase name="sub_bmp_rgb2_img/0" value_param="32-byte object &lt;00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
     <testcase name="sub_bmp_rgb2_img/1" value_param="32-byte object &lt;05-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
     <testcase name="sub_bmp_rgb2_img/2" value_param="32-byte object &lt;00-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
-    <testcase name="sub_bmp_rgb2_img/3" value_param="32-byte object &lt;05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00&gt;" status="run" time="0.016" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
+    <testcase name="sub_bmp_rgb2_img/3" value_param="32-byte object &lt;05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
     <testcase name="sub_bmp_rgb2_img/4" value_param="32-byte object &lt;00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 01-00 00-00 00-00 00-00 01-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
     <testcase name="sub_bmp_rgb2_img/5" value_param="32-byte object &lt;00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 0A-00 00-00 00-00 00-00 0A-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
     <testcase name="sub_bmp_mono_img/0" value_param="32-byte object &lt;00-00 00-00 00-00 00-00 00-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00 05-00 00-00 00-00 00-00&gt;" status="run" time="0" classname="BmpIter_Category/PT_BmpMonoIter_SubImg" />
@@ -158,7 +158,7 @@
     <testcase name="fill_packed_row/0" value_param="0" status="run" time="0" classname="Iter_Category/PT_Row_Iter" />
     <testcase name="fill_packed_row/1" value_param="2" status="run" time="0" classname="Iter_Category/PT_Row_Iter" />
   </testsuite>
-  <testsuite name="Iter_Category/PT_Col_Iterator" tests="4" failures="0" disabled="0" errors="0" time="0.015">
+  <testsuite name="Iter_Category/PT_Col_Iterator" tests="4" failures="0" disabled="0" errors="0" time="0.016">
     <testcase name="fill_planar_col/0" value_param="0" status="run" time="0" classname="Iter_Category/PT_Col_Iterator" />
     <testcase name="fill_planar_col/1" value_param="5" status="run" time="0" classname="Iter_Category/PT_Col_Iterator" />
     <testcase name="fill_packed_col/0" value_param="0" status="run" time="0" classname="Iter_Category/PT_Col_Iterator" />
