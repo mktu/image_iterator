@@ -2,5 +2,5 @@
 
 #include "BitmapTypes.h"
 #include "BmpImageProvider.h"
-#include "../SubImageProvider.h"
-#include "../ImageSizeCalculator.h"
+#include "../Core/SubImageProvider.h"
+#include "../Core/ImageSizeCalculator.h"

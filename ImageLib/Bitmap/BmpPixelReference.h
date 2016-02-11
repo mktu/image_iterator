@@ -1,5 +1,5 @@
 #pragma once
-#include "../StaticRecursion.h"
+#include "../Core/StaticRecursion.h"
 #include "BmpImageSource.h"
 #include <vector>
 #include <assert.h>

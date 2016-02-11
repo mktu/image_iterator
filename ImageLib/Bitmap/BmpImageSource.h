@@ -3,9 +3,9 @@
 #include <vector>
 #include <memory>
 #include <Windows.h>
-#include "../SourceHolderBase.h"
-#include "../ImageSourceTag.h"
-#include "../ImageSourceDispatcher.h"
+#include "../Core/SourceHolderBase.h"
+#include "../Core/ImageSourceTag.h"
+#include "../Core/ImageSourceDispatcher.h"
 
 namespace image_lib
 {

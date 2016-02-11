@@ -2,7 +2,6 @@
 #include <Windows.h>
 #include <algorithm>
 #include "../ImageLib/ImageAll.h"
-#include "../ImageLib/SubImageProvider.h"
 
 namespace
 {

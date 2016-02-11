@@ -43,9 +43,6 @@
     <Filter Include="ヘッダー ファイル\Utility">
       <UniqueIdentifier>{6f6abddf-dd55-44ab-8d72-4a4661b0a78f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\RawImage">
-      <UniqueIdentifier>{c34584a9-f967-4966-b4a1-e6f35ca6ad34}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ヘッダー ファイル\Size">
       <UniqueIdentifier>{cf61c83a-406a-4735-a78d-060698fc8d36}</UniqueIdentifier>
     </Filter>
@@ -56,51 +53,6 @@
     </ClInclude>
     <ClInclude Include="ImageAll.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicPixelIterator.h">
-      <Filter>ヘッダー ファイル\Iterator</Filter>
-    </ClInclude>
-    <ClInclude Include="BasicPixelReference.h">
-      <Filter>ヘッダー ファイル\Reference</Filter>
-    </ClInclude>
-    <ClInclude Include="BitFormat.h">
-      <Filter>ヘッダー ファイル\Format</Filter>
-    </ClInclude>
-    <ClInclude Include="BitLocator.h">
-      <Filter>ヘッダー ファイル\Locator</Filter>
-    </ClInclude>
-    <ClInclude Include="BitPixelReference.h">
-      <Filter>ヘッダー ファイル\Reference</Filter>
-    </ClInclude>
-    <ClInclude Include="GrayFormat.h">
-      <Filter>ヘッダー ファイル\Format</Filter>
-    </ClInclude>
-    <ClInclude Include="GrayPixelReference.h">
-      <Filter>ヘッダー ファイル\Reference</Filter>
-    </ClInclude>
-    <ClInclude Include="Incremeter2d.h">
-      <Filter>ヘッダー ファイル\Incremeter</Filter>
-    </ClInclude>
-    <ClInclude Include="PackedFormat.h">
-      <Filter>ヘッダー ファイル\Format</Filter>
-    </ClInclude>
-    <ClInclude Include="PlanarFormat.h">
-      <Filter>ヘッダー ファイル\Format</Filter>
-    </ClInclude>
-    <ClInclude Include="SourceHolderBase.h">
-      <Filter>ヘッダー ファイル\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="PointerHolder.h">
-      <Filter>ヘッダー ファイル\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="SubImageProvider.h">
-      <Filter>ヘッダー ファイル\Provider</Filter>
-    </ClInclude>
-    <ClInclude Include="Provicers.h">
-      <Filter>ヘッダー ファイル\Provider</Filter>
-    </ClInclude>
-    <ClInclude Include="Locator.h">
-      <Filter>ヘッダー ファイル\Locator</Filter>
     </ClInclude>
     <ClInclude Include="Bitmap\BitmapImage.h">
       <Filter>ヘッダー ファイル</Filter>
@@ -123,25 +75,10 @@
     <ClInclude Include="Bitmap\BmpPixelReference.h">
       <Filter>ヘッダー ファイル\Reference</Filter>
     </ClInclude>
-    <ClInclude Include="ImageTypes.h">
-      <Filter>ヘッダー ファイル\Typedefs</Filter>
-    </ClInclude>
     <ClInclude Include="Bitmap\BitmapTypes.h">
       <Filter>ヘッダー ファイル\Typedefs</Filter>
     </ClInclude>
-    <ClInclude Include="StaticRecursion.h">
-      <Filter>ヘッダー ファイル\Utility</Filter>
-    </ClInclude>
-    <ClInclude Include="RawImageAdapter.h">
-      <Filter>ヘッダー ファイル\RawImage</Filter>
-    </ClInclude>
     <ClInclude Include="Bitmap\BitmapImageSize.h">
-      <Filter>ヘッダー ファイル\Size</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageSize.h">
-      <Filter>ヘッダー ファイル\Size</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageSizeCalculator.h">
       <Filter>ヘッダー ファイル\Size</Filter>
     </ClInclude>
     <ClInclude Include="Bitmap\BmpBitPixelReference.h">
@@ -150,11 +87,68 @@
     <ClInclude Include="Bitmap\BmpBitLocator.h">
       <Filter>ヘッダー ファイル\Locator</Filter>
     </ClInclude>
-    <ClInclude Include="ImageSourceDispatcher.h">
+    <ClInclude Include="Core\BitFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GrayFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\PackedFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\PlanarFormat.h">
+      <Filter>ヘッダー ファイル\Format</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Incremeter2d.h">
+      <Filter>ヘッダー ファイル\Incremeter</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BasicPixelIterator.h">
+      <Filter>ヘッダー ファイル\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BitLocator.h">
+      <Filter>ヘッダー ファイル\Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Locator.h">
+      <Filter>ヘッダー ファイル\Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Provicers.h">
+      <Filter>ヘッダー ファイル\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SubImageProvider.h">
+      <Filter>ヘッダー ファイル\Provider</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BasicPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BitPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GrayPixelReference.h">
+      <Filter>ヘッダー ファイル\Reference</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ImageSize.h">
+      <Filter>ヘッダー ファイル\Size</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ImageSizeCalculator.h">
+      <Filter>ヘッダー ファイル\Size</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ImageSourceDispatcher.h">
       <Filter>ヘッダー ファイル\Source</Filter>
     </ClInclude>
-    <ClInclude Include="ImageSourceTag.h">
+    <ClInclude Include="Core\ImageSourceTag.h">
       <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\PointerHolder.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SourceHolderBase.h">
+      <Filter>ヘッダー ファイル\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ImageTypes.h">
+      <Filter>ヘッダー ファイル\Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\StaticRecursion.h">
+      <Filter>ヘッダー ファイル\Utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Provicers.h"
-#include "SubImageProvider.h"
-#include "ImageTypes.h"
-#include "ImageSizeCalculator.h"
+#include "Core/Provicers.h"
+#include "Core/SubImageProvider.h"
+#include "Core/ImageTypes.h"
+#include "Core/ImageSizeCalculator.h"
+#include "Bitmap/BitmapImage.h"

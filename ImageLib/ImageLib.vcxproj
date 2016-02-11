@@ -227,10 +227,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BasicPixelIterator.h" />
-    <ClInclude Include="BasicPixelReference.h" />
-    <ClInclude Include="BitFormat.h" />
-    <ClInclude Include="BitLocator.h" />
     <ClInclude Include="Bitmap\BitmapFileCommon.h" />
     <ClInclude Include="Bitmap\BitmapFormat.h" />
     <ClInclude Include="Bitmap\BitmapImage.h" />
@@ -242,26 +238,29 @@
     <ClInclude Include="Bitmap\BmpImageSource.h" />
     <ClInclude Include="Bitmap\BmpLocator.h" />
     <ClInclude Include="Bitmap\BmpPixelReference.h" />
-    <ClInclude Include="BitPixelReference.h" />
+    <ClInclude Include="Core\BasicPixelIterator.h" />
+    <ClInclude Include="Core\BasicPixelReference.h" />
+    <ClInclude Include="Core\BitFormat.h" />
+    <ClInclude Include="Core\BitLocator.h" />
+    <ClInclude Include="Core\BitPixelReference.h" />
+    <ClInclude Include="Core\GrayFormat.h" />
+    <ClInclude Include="Core\GrayPixelReference.h" />
+    <ClInclude Include="Core\ImageSize.h" />
+    <ClInclude Include="Core\ImageSizeCalculator.h" />
+    <ClInclude Include="Core\ImageSourceDispatcher.h" />
+    <ClInclude Include="Core\ImageSourceTag.h" />
+    <ClInclude Include="Core\ImageTypes.h" />
+    <ClInclude Include="Core\Incremeter2d.h" />
+    <ClInclude Include="Core\Locator.h" />
+    <ClInclude Include="Core\PackedFormat.h" />
+    <ClInclude Include="Core\PlanarFormat.h" />
+    <ClInclude Include="Core\PointerHolder.h" />
+    <ClInclude Include="Core\Provicers.h" />
+    <ClInclude Include="Core\SourceHolderBase.h" />
+    <ClInclude Include="Core\StaticRecursion.h" />
+    <ClInclude Include="Core\SubImageProvider.h" />
     <ClInclude Include="GenericImage.h" />
-    <ClInclude Include="GrayFormat.h" />
-    <ClInclude Include="GrayPixelReference.h" />
     <ClInclude Include="ImageAll.h" />
-    <ClInclude Include="ImageSizeCalculator.h" />
-    <ClInclude Include="ImageSourceDispatcher.h" />
-    <ClInclude Include="ImageSourceTag.h" />
-    <ClInclude Include="ImageTypes.h" />
-    <ClInclude Include="Incremeter2d.h" />
-    <ClInclude Include="RawImageAdapter.h" />
-    <ClInclude Include="ImageSize.h" />
-    <ClInclude Include="StaticRecursion.h" />
-    <ClInclude Include="Locator.h" />
-    <ClInclude Include="PackedFormat.h" />
-    <ClInclude Include="PlanarFormat.h" />
-    <ClInclude Include="PointerHolder.h" />
-    <ClInclude Include="Provicers.h" />
-    <ClInclude Include="SourceHolderBase.h" />
-    <ClInclude Include="SubImageProvider.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

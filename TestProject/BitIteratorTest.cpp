@@ -3,7 +3,6 @@
 #include <algorithm>
 #include "../ImageLib/ImageAll.h"
 #include <bitset>
-#include "../ImageLib/SubImageProvider.h"
 #include "TestTimer.h"
 
 namespace

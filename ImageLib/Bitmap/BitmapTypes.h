@@ -2,7 +2,7 @@
 
 #include "BitmapFormat.h"
 #include "BmpImageSource.h"
-#include "../GenericImage.h"
+#include "../Core/GenericImage.h"
 
 namespace image_lib
 {

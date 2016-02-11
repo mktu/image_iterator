@@ -1,6 +1,6 @@
 #pragma once
-#include "../BasicPixelIterator.h"
-#include "../Incremeter2d.h"
+#include "../Core/BasicPixelIterator.h"
+#include "../Core/Incremeter2d.h"
 #include "BmpLocator.h"
 #include "BmpBitLocator.h"
 #include "BitmapFileCommon.h"

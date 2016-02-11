@@ -1,7 +1,7 @@
 #pragma once
 
 #include "BitmapTypes.h"
-#include "../GenericImage.h"
+#include "../Core/GenericImage.h"
 
 // http://tipsandtricks.runicsoft.com/Cpp/BitmapTutorial.html
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageIterator", "ImageIterator\ImageIterator.vcxproj", "{294CE56D-8D43-4151-A509-47AE0B1D0DF3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample", "Sample\Sample.vcxproj", "{294CE56D-8D43-4151-A509-47AE0B1D0DF3}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageLib", "ImageLib\ImageLib.vcxproj", "{D8963124-0B62-4752-8109-297FEA4BB27C}"
 EndProject

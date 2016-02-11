@@ -1,7 +1,7 @@
 #pragma once
 #include <assert.h>
 #include <iterator>
-#include "../Incremeter2d.h"
+#include "../Core/Incremeter2d.h"
 
 namespace image_lib
 {
