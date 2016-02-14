@@ -70,8 +70,6 @@ namespace image_lib
 				typedef typename non_ownership_image_provider<format_type>::image_type image_type;
 			};
 		};
-
-		
 	}
 
 	template<typename ImageFormat>

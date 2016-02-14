@@ -23,11 +23,11 @@ namespace
 	{
 		unsigned char values[] = {10,11,12};
 		unsigned char values2[] = {9,11,12};
-		non_ownership_rgb24_planar_image::value_type px(values);
-		non_ownership_rgb24_planar_image::const_reference ref(px);
-		non_ownership_rgb24_planar_image::value_type px2(ref);
-		non_ownership_rgb24_planar_image::value_type px3(values2);
-		non_ownership_rgb24_planar_image::value_type px4(px);
+		non_ownership_color24u_planar_image::value_type px(values);
+		non_ownership_color24u_planar_image::const_reference ref(px);
+		non_ownership_color24u_planar_image::value_type px2(ref);
+		non_ownership_color24u_planar_image::value_type px3(values2);
+		non_ownership_color24u_planar_image::value_type px4(px);
 
 		ASSERT_EQ( 10, ref[0] );
 		ASSERT_EQ( 11, ref[1] );
