@@ -36,7 +36,7 @@ namespace
 	// ‰æ‘œ‚ğ–„‚ßs‚­‚·
 	TEST(T_MonoIter, fill_mono_img)
 	{
-		auto psDstGray( create_gray_image(10,10) );
+		auto psDstGray( create_co_ownership_image(10,10,gray8u_format()) );
 		typedef decltype(psDstGray) image_type;
 
 		std::for_each(psDstGray.begin(), psDstGray.end(), [](image_type::reference& b){ b = 128; });

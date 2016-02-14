@@ -55,7 +55,7 @@ namespace
 	// 基本テスト：画像を埋め尽くす(8bit)
 	TEST(T_avg_filter, filter)
 	{
-		auto image (create_planar_image(5,5));
+		auto image (create_co_ownership_image(5,5,color24u_planar_format()));
 		typedef decltype(image) image_type;
 		int rgb[] = { 64, 128, 192 };
 		int rgb2[] = { 32, 64, 128 };

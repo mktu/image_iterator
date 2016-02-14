@@ -39,7 +39,7 @@ namespace
 
 	TEST(ImageTTest, const_image_test2)
 	{
-		auto psDstGray (create_gray_image(10,10));
+		auto psDstGray (create_co_ownership_image(10,10,gray8u_format()));
 		
 		typedef decltype(psDstGray) image_type;
 
@@ -53,13 +53,13 @@ namespace
 
 	TEST(ImageTTest, const_image_test3)
 	{
-		auto psDstGray( create_gray_image(10,10) );
+		auto psDstGray( create_co_ownership_image(10,10,gray8u_format()) );
 		typedef decltype(psDstGray) image_type;
 
 		std::for_each(psDstGray.begin(), psDstGray.end(), [](image_type::reference& b){ b = 128; });
 
 		const auto psDstGray2 = psDstGray;
-		const auto psDstGray3 (create_gray_image(10,10) );
+		const auto psDstGray3 (create_co_ownership_image(10,10,gray8u_format()) );
 
 		ASSERT_TRUE( std::all_of( psDstGray2.cbegin(), psDstGray2.cend(), 
 			[](const image_type::const_reference& b)->bool{ return b == 128;} ) );
@@ -67,11 +67,11 @@ namespace
 
 	TEST(ImageTTest, 2d_access_test)
 	{
-		auto psDstRGB ( create_planar_image(10,10) );
+		auto psDstRGB ( create_co_ownership_image(10,10,color24u_planar_format()) );
 		typedef decltype(psDstRGB) image_type;
 		{
 			BYTE rgb[3] = { 128,128,128 };
-			auto psRGB( create_planar_image(10,10) );
+			auto psRGB( create_co_ownership_image(10,10,color24u_planar_format()) );
 			std::fill(psRGB.begin(), psRGB.end(), rgb);
 			const auto & refRGB = psRGB;
 			
@@ -88,7 +88,7 @@ namespace
 
 	TEST(ImageTTest, sub_image_test1)
 	{
-		auto parent (create_planar_image(10,10));
+		auto parent (create_co_ownership_image(10,10,color24u_planar_format()));
 		auto subImage = sub_image( parent, 4, 2, 1, 6 );
 		ASSERT_EQ(4, subImage.width() );
 		ASSERT_EQ(2, subImage.height() );
@@ -96,7 +96,7 @@ namespace
 
 	TEST(ImageTTest, sub_image_test2)
 	{
-		auto parent (create_planar_image(50,50));
+		auto parent (create_co_ownership_image(50,50,color24u_planar_format()));
 		auto subImage = sub_image( sub_image( parent, 10, 10, 20, 20 ), 5, 5, 5, 5 );
 		ASSERT_EQ(5, subImage.width() );
 		ASSERT_EQ(5, subImage.height() );

@@ -240,7 +240,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	// SubImage‚ğ–„‚ßs‚­‚·(Planar)
 	TEST_P(PT_Iter_SubImage, planar_sub_img)
 	{
-		auto parentImage( create_planar_image(10,10));
+		auto parentImage( create_co_ownership_image(10,10,color24u_planar_format()));
 		const SubImageCoord subImageCoord = GetParam(); 
 		auto subImage = sub_image( parentImage, subImageCoord.size_x, subImageCoord.size_y, subImageCoord.start_x, subImageCoord.start_y );
 		BYTE rgb[] =  {64,128,192};
@@ -267,7 +267,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	// SubImage‚ğ–„‚ßs‚­‚·(Packed)
 	TEST_P(PT_Iter_SubImage, packed_sub_img)
 	{
-		auto parentImage( create_packed_image(10,10) );
+		auto parentImage( create_co_ownership_image(10,10,color24u_format()) );
 		const SubImageCoord subImageCoord = GetParam(); 
 		auto subImage = sub_image( parentImage, subImageCoord.size_x, subImageCoord.size_y, subImageCoord.start_x, subImageCoord.start_y );
 		BYTE rgb[] =  {64,128,192};
@@ -303,7 +303,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	// Nest‚µ‚½SubImage‚ğ–„‚ßs‚­‚·
 	TEST_F(T_Iter, nested_sub_img)
 	{
-		auto parentImage( create_planar_image(10,10) );
+		auto parentImage( create_co_ownership_image(10,10,color24u_planar_format()) );
 		auto subImage = sub_image( parentImage,5,5,5,5 );
 		auto subsubImage =  sub_image(subImage,2,2,3,3);
 
@@ -359,7 +359,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	{
 		BYTE rgb[3] = { 32,64,128 };
 		//array_.resize(4096*1024*3);
-		auto image (create_packed_image( 4096, 1024 ));
+		auto image (create_co_ownership_image( 4096, 1024, color24u_format() ));
 		auto subimage = sub_image(image, 4096, 1024, 0, 0);
 		timer_on t;
 		fill( subimage.begin(), subimage.end(), rgb );

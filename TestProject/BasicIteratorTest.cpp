@@ -24,7 +24,7 @@ namespace
 
 	co_ownership_gray8u_image obtain_incremental_test_data()
 	{
-		auto psDstGray( create_gray_image(10,10) );
+		auto psDstGray( create_co_ownership_image(10,10, gray8u_format()) );
 		unsigned char i = 0;
 		std::generate(psDstGray.begin(), psDstGray.end(), [&i](){
 			return i++;
