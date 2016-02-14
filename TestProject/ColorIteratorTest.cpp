@@ -65,7 +65,7 @@ namespace
 	TEST_F(T_Iter, fill_img_planar_iter) 
 	{
 		BYTE rgb[3] = { 128,128,128 };
-		non_ownership_rgb24_planar_image image ( create_non_ownership_image( &array_[0], 3, 3, rgb8u_planar_format() ) );
+		auto image ( create_planar_image( &array_[0], 3, 3 ) );
 		std::fill( image.begin(), image.end(), rgb );
 		ASSERT_TRUE( std::all_of( array_.begin(), array_.end(), [](BYTE b){return b == 128;} ) );
 	}
@@ -74,7 +74,7 @@ namespace
 	TEST_F(T_Iter, fill_img_planar_reverse_iter) 
 	{
 		BYTE rgb[3] = { 128,128,128 };
-		non_ownership_rgb24_planar_image image (create_non_ownership_image( &array_[0], 3, 3, rgb8u_planar_format() ));
+		auto image (create_planar_image( &array_[0], 3, 3 ));
 		std::fill( image.rbegin(), image.rend(), rgb );
 		ASSERT_TRUE( std::all_of( array_.begin(), array_.end(), [](BYTE b){return b == 128;} ) );
 	}
@@ -83,7 +83,7 @@ namespace
 	TEST_F(T_Iter, fill_img_packed_iter_test) 
 	{
 		BYTE rgb[3] = { 32,64,128 };
-		non_ownership_rgb24_image image( create_non_ownership_image( &array_[0], 3, 3, rgb8u_format() ) );
+		auto image( create_packed_image( &array_[0], 3, 3 ) );
 		std::fill( image.begin(), image.end(), rgb );
 		for( size_t i = 0; i < array_.size(); i+=3 )
 		{
@@ -97,7 +97,7 @@ namespace
 	TEST_F(T_Iter, fill_img_packed_reverse_iter) 
 	{
 		BYTE rgb[3] = { 32,64,128 };
-		non_ownership_rgb24_image image ( create_non_ownership_image( &array_[0], 3, 3, rgb8u_format() ) );
+		auto image ( create_packed_image( &array_[0], 3, 3 ) );
 		std::fill( image.rbegin(), image.rend(), rgb );
 		for( size_t i = 0; i < array_.size(); i+=3 )
 		{
@@ -123,7 +123,7 @@ namespace
 	TEST_P(PT_Row_Iter, fill_planar_row) 
 	{
 		BYTE rgb[3] = { 32,64,128 };
-		non_ownership_rgb24_planar_image image( create_non_ownership_image( &array_[0], size_x, size_y, rgb8u_planar_format() ) );
+		auto image( create_planar_image( &array_[0], size_x, size_y ) );
 		const size_t line = GetParam();
 		std::fill( image.row_begin(line), image.row_end(line), rgb );
 		
@@ -140,7 +140,7 @@ namespace
 	TEST_P(PT_Row_Iter, fill_packed_row) 
 	{
 		BYTE rgb[3] = { 32,64,128 };
-		non_ownership_rgb24_image image ( create_non_ownership_image( &array_[0], size_x, size_y, rgb8u_format() ) );
+		auto image ( create_packed_image( &array_[0], size_x, size_y ) );
 		const size_t line = GetParam();
 		std::fill( image.row_begin(line), image.row_end(line), rgb );
 		
@@ -175,7 +175,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	TEST_P(PT_Col_Iterator, fill_planar_col) 
 	{
 		BYTE rgb[3] = { 32,64,128 };
-		non_ownership_rgb24_planar_image image( create_non_ownership_image( &array_[0], size_x, size_y, rgb8u_planar_format() ) );
+		auto image( create_planar_image( &array_[0], size_x, size_y ) );
 		const size_t col = GetParam();
 		std::fill( image.col_begin(col), image.col_end(col), rgb );
 		
@@ -195,7 +195,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	TEST_P(PT_Col_Iterator, fill_packed_col) 
 	{
 		BYTE rgb[3] = { 32,64,128 };
-		non_ownership_rgb24_image image (create_non_ownership_image( &array_[0], size_x, size_y, rgb8u_format() ));
+		auto image (create_packed_image( &array_[0], size_x, size_y ));
 		std::fill( image.y_at(1,1), image.col_end(1), rgb );
 		const size_t col = GetParam();
 		std::fill( image.col_begin(col), image.col_end(col), rgb );
@@ -240,7 +240,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	// SubImage‚ð–„‚ßs‚­‚·(Planar)
 	TEST_P(PT_Iter_SubImage, planar_sub_img)
 	{
-		co_ownership_rgb24_planar_image parentImage( create_co_ownership_image(10,10, rgb8u_planar_format()));
+		auto parentImage( create_planar_image(10,10));
 		const SubImageCoord subImageCoord = GetParam(); 
 		auto subImage = sub_image( parentImage, subImageCoord.size_x, subImageCoord.size_y, subImageCoord.start_x, subImageCoord.start_y );
 		BYTE rgb[] =  {64,128,192};
@@ -267,7 +267,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	// SubImage‚ð–„‚ßs‚­‚·(Packed)
 	TEST_P(PT_Iter_SubImage, packed_sub_img)
 	{
-		co_ownership_rgb24_image parentImage( create_co_ownership_image(10,10, rgb8u_format()) );
+		auto parentImage( create_packed_image(10,10) );
 		const SubImageCoord subImageCoord = GetParam(); 
 		auto subImage = sub_image( parentImage, subImageCoord.size_x, subImageCoord.size_y, subImageCoord.start_x, subImageCoord.start_y );
 		BYTE rgb[] =  {64,128,192};
@@ -303,7 +303,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	// Nest‚µ‚½SubImage‚ð–„‚ßs‚­‚·
 	TEST_F(T_Iter, nested_sub_img)
 	{
-		co_ownership_rgb24_planar_image parentImage( create_co_ownership_image(10,10,rgb8u_planar_format()) );
+		auto parentImage( create_planar_image(10,10) );
 		auto subImage = sub_image( parentImage,5,5,5,5 );
 		auto subsubImage =  sub_image(subImage,2,2,3,3);
 
@@ -359,7 +359,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	{
 		BYTE rgb[3] = { 32,64,128 };
 		//array_.resize(4096*1024*3);
-		co_ownership_rgb24_image image (create_co_ownership_image( 4096, 1024, rgb8u_format() ));
+		auto image (create_packed_image( 4096, 1024 ));
 		auto subimage = sub_image(image, 4096, 1024, 0, 0);
 		timer_on t;
 		fill( subimage.begin(), subimage.end(), rgb );
@@ -370,7 +370,7 @@ INSTANTIATE_TEST_CASE_P(Iter_Category,
 	{
 		BYTE rgb[3] = { 32,64,128 };
 		array_.resize(4096*1024*3);
-		non_ownership_rgb24_planar_image image( create_non_ownership_image( &array_[0], 4096, 1024, rgb8u_planar_format() ) );
+		auto image( create_planar_image( &array_[0], 4096, 1024 ) );
 		timer_on t;
 		for(int i = 0; i < 1024; i++)
 			for(int j = 0; j < 4096; j ++)

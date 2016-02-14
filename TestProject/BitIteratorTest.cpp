@@ -84,7 +84,7 @@ namespace
 	TEST_P(PT_BitIter_Row, fill_bit_row_byte)
 	{
 		std::vector<BYTE> v(size_x_in_byte*size_y,0);
-		non_ownership_bit_image psDstBit (create_non_ownership_image(&v[0],size_x_in_bit,size_y, bit8u_format()));
+		non_ownership_bit_image psDstBit (create_bit_image(&v[0],size_x_in_bit,size_y));
 		const size_t line = GetParam();
 
 		std::fill(psDstBit.row_begin(line), psDstBit.row_end(line), true );
@@ -102,7 +102,7 @@ namespace
 	TEST_P(PT_BitIter_Row, fill_bit_row_short)
 	{
 		std::vector<unsigned short> v(size_x_in_short * size_y,0);
-		non_ownership_bit_image_16 psDstBit (create_non_ownership_image(&v[0],size_x_in_bit_short_type,size_y,u16_based_bit_image()));
+		non_ownership_bit_image_16 psDstBit (create_bit_image(&v[0],size_x_in_bit_short_type,size_y));
 		const size_t line = GetParam();
 
 		std::fill( psDstBit.row_begin(line),  psDstBit.row_end(line), true);
@@ -130,7 +130,7 @@ INSTANTIATE_TEST_CASE_P(BitIter_Category,
 	TEST_P(PT_BitIter_Col, fill_bit_col_test_byte)
 	{
 		std::vector<BYTE> v(size_x_in_byte*size_y,0);
-		non_ownership_bit_image psDstBit (create_non_ownership_image(&v[0],size_x_in_bit,size_y,bit8u_format()));
+		non_ownership_bit_image psDstBit (create_bit_image(&v[0],size_x_in_bit,size_y));
 		const size_t col = GetParam();
 
 		std::fill(psDstBit.col_begin(col), psDstBit.col_end(col), true );
@@ -147,7 +147,7 @@ INSTANTIATE_TEST_CASE_P(BitIter_Category,
 	TEST_P(PT_BitIter_Col, fill_bit_col_short)
 	{
 		std::vector<unsigned short> v(size_x_in_short * size_y,0);
-		non_ownership_bit_image_16 psDstBit (create_non_ownership_image(&v[0],size_x_in_bit_short_type,size_y,u16_based_bit_image()));
+		non_ownership_bit_image_16 psDstBit (create_bit_image(&v[0],size_x_in_bit_short_type,size_y));
 		const size_t col = GetParam();
 
 		std::fill( psDstBit.col_begin(col),  psDstBit.col_end(col), true);

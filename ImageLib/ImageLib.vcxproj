@@ -256,9 +256,11 @@
     <ClInclude Include="Core\PlanarFormat.h" />
     <ClInclude Include="Core\PointerHolder.h" />
     <ClInclude Include="Core\Provicers.h" />
+    <ClInclude Include="Core\ProviderTypes.h" />
     <ClInclude Include="Core\SourceHolderBase.h" />
     <ClInclude Include="Core\StaticRecursion.h" />
     <ClInclude Include="Core\SubImageProvider.h" />
+    <ClInclude Include="Core\Utility.h" />
     <ClInclude Include="GenericImage.h" />
     <ClInclude Include="ImageAll.h" />
   </ItemGroup>

@@ -150,5 +150,11 @@
     <ClInclude Include="Core\StaticRecursion.h">
       <Filter>ヘッダー ファイル\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="Core\ProviderTypes.h">
+      <Filter>ヘッダー ファイル\Typedefs</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Utility.h">
+      <Filter>ヘッダー ファイル\Utility</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

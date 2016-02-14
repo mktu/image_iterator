@@ -55,14 +55,15 @@ namespace
 	// 基本テスト：画像を埋め尽くす(8bit)
 	TEST(T_avg_filter, filter)
 	{
-		co_ownership_rgb24_planar_image image (create_co_ownership_image(5,5,rgb8u_planar_format()));
+		auto image (create_planar_image(5,5));
+		typedef decltype(image) image_type;
 		int rgb[] = { 64, 128, 192 };
 		int rgb2[] = { 32, 64, 128 };
 		std::fill( image.begin(), image.end(), rgb );
 		apply_averaging_filter( image, 2, averaging_filter() );
 
 		ASSERT_TRUE( 
-			std::all_of( image.begin(), image.end(), [](co_ownership_rgb24_planar_image::const_reference ref){
+			std::all_of( image.begin(), image.end(), [](image_type::const_reference ref){
 				return ref[0] == 64 &&
 					ref[1] == 128 &&
 					ref[2] == 192;

@@ -24,7 +24,7 @@ namespace
 
 	co_ownership_gray8u_image obtain_incremental_test_data()
 	{
-		co_ownership_gray8u_image psDstGray( create_co_ownership_image(10,10,gray8u_format()) );
+		auto psDstGray( create_gray_image(10,10) );
 		unsigned char i = 0;
 		std::generate(psDstGray.begin(), psDstGray.end(), [&i](){
 			return i++;
@@ -148,7 +148,7 @@ namespace
 	TEST(T_BasicIter, iter_comp_test3)
 	{
 		co_ownership_gray8u_image psDstGray = obtain_incremental_test_data();
-		co_ownership_gray8u_image subImage = sub_image( obtain_incremental_test_data(), 2, 3, 3, 6 );
+		co_ownership_gray8u_image subImage = sub_image(	obtain_incremental_test_data(), 2, 3, 3, 6 );
 		auto iter = psDstGray.begin()+20;
 		auto iter2 = subImage.begin();
 		ASSERT_TRUE( iter < iter2 );

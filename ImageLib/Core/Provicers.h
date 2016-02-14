@@ -1,6 +1,7 @@
 #pragma once
 
 #include <algorithm>
+#include "Utility.h"
 #include "PointerHolder.h"
 #include "GenericImage.h"
 
@@ -38,6 +39,39 @@ namespace image_lib
 				return image_type( source_type(s,w,h) );
 			}
 		};
+
+		template<
+			size_t channels,
+			typename Pointer
+		> 
+		struct retrieve_image_format
+		{
+			typedef typename remove_pointer<Pointer>::type value_type;
+			template<
+				template<size_t, class T> class FormatType
+			> 
+			struct dispatcher
+			{
+				typedef FormatType<channels,value_type> format_type;
+				typedef typename non_ownership_image_provider<format_type>::image_type image_type;
+			};
+
+		};
+		template<typename Pointer> 
+		struct retrieve_image_format<1,Pointer>
+		{
+			typedef typename remove_pointer<Pointer>::type value_type;
+			template<
+				template<class T> class FormatType
+			> 
+			struct dispatcher
+			{
+				typedef FormatType<value_type> format_type;
+				typedef typename non_ownership_image_provider<format_type>::image_type image_type;
+			};
+		};
+
+		
 	}
 
 	template<typename ImageFormat>

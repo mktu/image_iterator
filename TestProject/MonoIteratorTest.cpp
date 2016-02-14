@@ -36,12 +36,13 @@ namespace
 	// 画像を埋め尽くす
 	TEST(T_MonoIter, fill_mono_img)
 	{
-		co_ownership_gray8u_image psDstGray( create_co_ownership_image(10,10,gray8u_format()) );
-		
-		std::for_each(psDstGray.begin(), psDstGray.end(), [](co_ownership_gray8u_image::reference& b){ b = 128; });
+		auto psDstGray( create_gray_image(10,10) );
+		typedef decltype(psDstGray) image_type;
+
+		std::for_each(psDstGray.begin(), psDstGray.end(), [](image_type::reference& b){ b = 128; });
 
 		ASSERT_TRUE( std::all_of( psDstGray.begin(), psDstGray.end(), 
-			[](const co_ownership_gray8u_image::reference& b)->bool{ return b == 128;} ) );
+			[](const image_type::reference& b)->bool{ return b == 128;} ) );
 	}
 
 // パラメータ化テスト
@@ -59,7 +60,8 @@ namespace
 	// 指定された行に対して値を設定する
 	TEST_P(PT_MonoIter_Row, fill_mono_row) 
 	{
-		non_ownership_gray8u_image image (create_non_ownership_image( &array_[0], size_x, size_y, gray8u_format() ));
+		auto image = create_gray_image(&array_[0],size_x, size_y);
+
 		const size_t line = GetParam();
 		std::fill( image.row_begin(line), image.row_end(line), 128 );
 		
@@ -87,7 +89,7 @@ INSTANTIATE_TEST_CASE_P(MonoIter_Category,
 	// 指定された列に対して値を設定する
 	TEST_P(PT_MonoIter_Col, fill_mono_col) 
 	{
-		non_ownership_gray8u_image image (create_non_ownership_image( &array_[0], size_x, size_y, gray8u_format() ));
+		auto image (create_gray_image( &array_[0], size_x, size_y ));
 		const size_t col = GetParam();
 		std::fill( image.col_begin(col), image.col_end(col), 128 );
 		
@@ -129,7 +131,7 @@ namespace
 	TEST(IteratorTest2, mono_image_t_speed_test) 
 	{
 		ByteArray array_(4096*1024);
-		non_ownership_gray8u_image image (create_non_ownership_image( &array_[0], 4096, 1024, gray8u_format() ));
+		auto image (create_gray_image( &array_[0], 4096, 1024 ));
 
 		timer_on t;
 
@@ -140,7 +142,7 @@ namespace
 	TEST(IteratorTest2, mono_image_t_array_like_access_speed_test) 
 	{
 		ByteArray array_(4096*1024);
-		non_ownership_gray8u_image image ( create_non_ownership_image( &array_[0], 4096, 1024, gray8u_format() ));
+		auto image ( create_gray_image( &array_[0], 4096, 1024 ));
 
 		timer_on t;
 
