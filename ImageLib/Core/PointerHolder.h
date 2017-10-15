@@ -44,7 +44,7 @@ namespace image_lib
 		typedef std::shared_ptr<array_type> shared_array_type;
 
 		co_ownership_source_holder( const shared_array_type& shared_array, coord_t w, coord_t h) : 
-			array_(shared_array), base_type( &(*shared_array)[0], w,h) { }
+			base_type( &(*shared_array)[0], w,h),array_(shared_array) { }
 
 		shared_array_type array_;
 	};

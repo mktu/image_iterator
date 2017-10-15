@@ -20,8 +20,7 @@ namespace image_lib
 		typedef ValueType value_type;
 
 		typedef std::random_access_iterator_tag iterator_category;
-		typedef typename iterator_traits::difference_type difference_type;
-		typedef typename iterator_traits::distance_type distance_type;
+		typedef typename iterator_traits::difference_type difference_type,distance_type;
 		typedef pointer _Unchecked_type;
 		typedef size_t size_type;
 			
@@ -37,7 +36,7 @@ namespace image_lib
 
 		template<typename SourceType>
 		basic_pixel_iterator(const SourceType& src, difference_type x, difference_type y)
-			: inc_( src ), data_(src,data_type::counter_type(x,y,src)){  }
+			: inc_( src ), data_(src,typename data_type::counter_type(x,y,src)){  }
 
 		reference operator*() const
 		{	// return designated object

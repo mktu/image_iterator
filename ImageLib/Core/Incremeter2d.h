@@ -84,7 +84,7 @@ namespace image_lib
 
 	struct col_incremeter_2d
 	{
-		col_incremeter_2d(const logical_coordinate_holder& source) : width_( source.superficial_coordinates_.width_ ) { }
+		col_incremeter_2d(const logical_coordinate_holder& source){ }
 
 		void advance(coord_t d, counterable_2d& counterable)
 		{
@@ -105,9 +105,6 @@ namespace image_lib
 		{
 			--counterable.y_;
 		}
-
-	private:
-		coord_t width_;
 	};
 
 	struct row_incremeter_2d

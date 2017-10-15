@@ -53,7 +53,7 @@ namespace image_lib
 	template<typename Pointer, typename Locator>
 	struct gray_pixel_iterator_reference : public gray_pixel_iterator_const_reference<Pointer, Locator>
 	{
-		typedef gray_pixel_iterator_const_reference<pointer, locator> base_type;
+		typedef gray_pixel_iterator_const_reference<Pointer, Locator> base_type;
 		typedef typename base_type::data_type data_type;
 		typedef typename base_type::reference reference;
 		typedef typename base_type::value_type value_type;
@@ -61,13 +61,13 @@ namespace image_lib
 
 		gray_pixel_iterator_reference& operator=(const value_type&  right)
 		{
-			*(data_.p_+data_.l_(data_.pos_)) = right;
+			*(base_type::data_.p_+base_type::data_.l_(base_type::data_.pos_)) = right;
 			return *this;
 		}
 
 		gray_pixel_iterator_reference& operator=(const gray_pixel_iterator_reference& right)
 		{
-			*(data_.p_+data_.l_(data_.pos_)) = static_cast<value_type>(right);
+			*(base_type::data_.p_+base_type::data_.l_(base_type::data_.pos_)) = static_cast<value_type>(right);
 			return *this;
 		}
 		gray_pixel_iterator_reference( const data_type& base ) : base_type( base ) { } 
@@ -76,8 +76,8 @@ namespace image_lib
 	template<typename Pointer, typename Locator>
 	struct gray_pixel_iterator_value : public gray_pixel_iterator_reference<Pointer, Locator>
 	{
-		typedef source_holder_base<pointer> holder_base; 
-		typedef gray_pixel_iterator_reference<pointer, locator> base_type;
+		typedef source_holder_base<Pointer> holder_base; 
+		typedef gray_pixel_iterator_reference<Pointer, Locator> base_type;
 		typedef typename base_type::value_type value_type;
 
 		gray_pixel_iterator_value(const value_type&  right) : base_type( holder_base(values_, 1, 1) )

@@ -57,7 +57,7 @@ namespace image_lib
 
 		bit_pixel_iterator_reference& operator=(value_type right)
 		{
-			data_.l_.set_bit(data_.p_, data_.pos_, right);
+			base_type::data_.l_.set_bit(base_type::data_.p_, base_type::data_.pos_, right);
 			return *this;
 		}
 
