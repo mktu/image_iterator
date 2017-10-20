@@ -31,8 +31,8 @@ namespace image_lib
 
 		inline coord_t operator-(const counterable_2d& right) const
 		{	
-			return ((offset_y_+y_)*underlying_width_+(offset_x_+x_))
-				-  ((right.offset_y_+right.y_)*right.underlying_width_+(right.offset_x_+right.x_));
+			return ((offset_y_+y_)*width_+(offset_x_+x_))
+				-  ((right.offset_y_+right.y_)*right.width_+(right.offset_x_+right.x_));
 		}
 
 		inline bool operator>(const counterable_2d& right) const
@@ -105,6 +105,11 @@ namespace image_lib
 		{
 			--counterable.y_;
 		}
+
+		coord_t distance(const counterable_2d& l, const counterable_2d& r) const
+		{
+			return l.y_ > r.y_ ? l.y_ - r.y_ : r.y_ - l.y_;
+		}
 	};
 
 	struct row_incremeter_2d
@@ -151,6 +156,11 @@ namespace image_lib
 				--counterable.y_;
 				counterable.x_=width_-1;
 			}
+		}
+
+		coord_t distance(const counterable_2d& l, const counterable_2d& r) const
+		{
+			return l-r;
 		}
 
 	private:

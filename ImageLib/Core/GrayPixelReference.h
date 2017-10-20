@@ -34,7 +34,7 @@ namespace image_lib
 		typedef typename std::iterator_traits<pointer> iterator_traits;
 		typedef typename iterator_traits::reference reference;
 		typedef typename iterator_traits::value_type value_type;
-		typedef typename iterator_traits::distance_type distance_type, difference_type;
+		typedef typename iterator_traits::difference_type distance_type, difference_type;
 
 		operator value_type() const 
 		{

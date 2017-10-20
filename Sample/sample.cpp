@@ -4,7 +4,7 @@
 
 using namespace image_lib;
 
-int main()
+void planar_image_sample()
 {
     // 8x8 rgb planar image buffer
     // (0,0,0), (0,0,0), ...,(0,0,0)
@@ -12,7 +12,7 @@ int main()
     // (0,0,0), (0,0,0), ...,(0,0,0)
     std::vector<unsigned char> source(8*8*3, 0); 
 
-    // create image accessor
+    // create image container
     auto image = create_planar_image( &source[0], 8, 8 );
     unsigned char rgb[3] = { 128,128,128 };
     // fill image buffer with (r,g,b,)=(128,128,128)
@@ -58,6 +58,59 @@ int main()
     rgb[0]=255;rgb[1]=255;rgb[2]=255;
     auto subImage = sub_image( image, 6, 6, 1, 1 );
     std::fill(subImage.begin(),subImage.end(),rgb);
+ 
+}
 
+void gray_image_sample()
+{
+    // 8x8 gray scale image buffer
+    std::vector<unsigned char> source(8*8, 0);
+
+    // create image container
+    auto image = create_gray_image( &source[0], 8, 8 );
+
+    std::fill(image.begin(),image.end(),128);
+
+    std::fill(image.row_begin(0),image.row_end(0),64);
+
+    std::fill(image.col_begin(7),image.col_end(7),32);
+
+    for(size_t i = 1; i < 8; i++)
+			for(size_t j = 0; j < 7; j++)
+			{
+                image[i][j] = 16;
+			}
+    auto subImage = sub_image( image, 6, 6, 1, 1 );
+    std::fill(subImage.begin(),subImage.end(),255);
+}
+
+void bit_image_sample()
+{
+    // 8x8 bit image buffer
+    std::vector<unsigned char> source(8*8/8, 0);
+
+    // create image container
+    auto image = create_bit_image( &source[0], 8, 8 );
+
+    std::fill(image.begin(),image.end(),true);
+
+    std::fill(image.row_begin(0),image.row_end(0),false);
+
+    std::fill(image.col_begin(7),image.col_end(7),true);
+
+    for(size_t i = 1; i < 8; i++)
+			for(size_t j = 0; j < 7; j++)
+			{
+                image[i][j] = false;
+			}
+    auto subImage = sub_image( image, 6, 6, 1, 1 );
+    std::fill(subImage.begin(),subImage.end(),true);
+}
+
+int main()
+{
+    planar_image_sample();
+    gray_image_sample();
+    bit_image_sample();
     return 0;
 }

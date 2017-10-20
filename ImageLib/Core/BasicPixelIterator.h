@@ -95,7 +95,7 @@ namespace image_lib
 
 		difference_type operator-(const my_iter& right) const
 		{	// return difference of iterators
-			return (this->data_.pos_-right.data_.pos_); 
+			return inc_.distance(this->data_.pos_, right.data_.pos_);
 		}
 
 		reference operator[](difference_type _Off) const
