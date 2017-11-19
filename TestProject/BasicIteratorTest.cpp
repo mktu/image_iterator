@@ -175,10 +175,10 @@ namespace
 	{
 		co_ownership_gray8u_image psDstGray = obtain_incremental_test_data();
 		co_ownership_gray8u_image subImage = sub_image( obtain_incremental_test_data(), 2, 3, 3, 6 );
-		auto iter = psDstGray.begin()+73;
-		auto iter2 = subImage.begin()+1;
-		ASSERT_EQ(9,iter-iter2);
-		ASSERT_EQ(-9,iter2-iter);
+		auto iter = subImage.begin();
+		auto iter2 = subImage.row_begin(2);
+		ASSERT_EQ(-4,iter-iter2);
+		ASSERT_EQ(4,iter2-iter);
 	}
 	
 }
